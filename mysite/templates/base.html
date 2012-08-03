@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}TODO{% endblock %}</title>
+		<link rel="stylesheet" href="{{STATIC_URL}}css/style.css" />
+		{% block css %}
+		{% endblock %}
+		
+		{% block js %}
+		{% endblock %}
+		<script type="text/javascript">
+            {% block jquery %}
+            {% endblock %}
+		</script>
+	</head>
+	<body>
+		<header>
+			<hgroup>
+				{% include "header.html" %}
+			</hgroup>
+			<nav>
+				{% block navigationbar %}
+				{% include "navigation.html" %}
+				{% endblock %}
+			</nav>
+		</header>
+		<section id="notice" style="display:none">
+			
+			{% block message %}
+			
+			{% endblock %}
+		</section>
+		<section id="contentArea">
+			
+			{% block content %}
+			
+			{% endblock %}
+		</section>
+		<footer>
+			{% block footer %}
+			{% include "footer.html" %}
+			{% endblock %}
+		</footer>
+	</body>
+</html>

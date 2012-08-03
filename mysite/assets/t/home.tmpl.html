@@ -1,0 +1,15 @@
+<script id="tmpl_home" type="x-jquery-tmpl">
+<div class="home-container">
+		<div class="flex-container">
+			<div class="flexslider">
+				<ul class="slides">
+                    {{each TopBannerImages}}
+                    <li><a href="#!/${Detail}"><img src="${Url}" width='100%'></a></li>
+                    {{/each}}
+				</ul>
+			</div>
+		</div>
+		<div class="flex-shadow"><!-- --></div>
+		
+	</div>
+</script>

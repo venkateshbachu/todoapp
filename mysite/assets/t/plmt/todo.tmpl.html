@@ -1,0 +1,31 @@
+<script id="tmpl_todo" type="x-jquery-tmpl">
+
+<div class="post">
+	<a href="#">
+	<button id="ADD" name="ADD POST">ADD TODO</button>
+</a>
+</div>
+<div class="contacts">
+      <fieldset id="add-row">
+<div><label for="todo">TODO: </label>
+<input type="text" id="todo" placeholder="What needs to be done?" value="${todo}">
+        </div>
+     </fieldset>
+    </div>
+</script>
+
+<script id="tmpl_openings" type="x-jquery-tmpl">
+	    <div class="short" id=${id}>
+	<div class="short-details">
+	<strong>${todo}</strong>
+	
+	<div class="bottomline">
+    	<span class="pdate">Posted On:${date}</span>
+    	</div>
+</div>
+	<div class="edit_post">
+               <a href="#!/todos/${id}"><button class="edit" id="${id}"><img src="/assets/img/pencil.png" /></button></a>
+                <button class=delete id="${id}"><img src="/assets/img/delete.png" /></button>
+            </div>
+    	</div>
+</script>

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block css %}
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/todo.css">
+{% endblock %}
+
+{% block js %}
+<script type='text/javascript' src='{{ STATIC_URL }}js/lib/LAB.js'></script>
+    <script type='text/javascript'>
+        $LAB.script('{{ STATIC_URL }}js/loader.js');
+    </script>
+{% endblock %}
+    
+    {% block content %}
+{% endblock %}
