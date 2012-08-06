@@ -1,6 +1,7 @@
 # Django settings for mysite project.
 import os
 import dj_database_url
+from postgresify import postgresify
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -13,19 +14,21 @@ MANAGERS = ADMINS
 
 PROJECT_PATH = os.path.abspath( os.path.join( os.path.dirname( __file__ ), '..' ) )
 
-DATABASES = {
-	'default': dj_database_url.config(default='postgres://localhost')}
+#DATABASES = {
+#	'default': dj_database_url.config(default='postgres://localhost')}
+DATABASES = postgresify()
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'todo_db',                      # Or path to database file if using sqlite3.
-        'USER': 'mysite_db_user',                      # Not used with sqlite3.
+       'USER': 'mysite_db_user',                      # Not used with sqlite3.
         'PASSWORD': 'pass',                  # Not used with sqlite3.
         'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '5433',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
